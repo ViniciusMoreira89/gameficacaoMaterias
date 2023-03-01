@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gameficação</title>
+</head>
+
+<body onload="inicio()">
+    <header class="navbar navbar-expand-lg bd-navbar">
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+            <div class="bd-navbar-toggle">
+                <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#containerDisciplinas">
+                    <i class="material-icons" style="padding: 2px 3px 0px 3px;">dehaze</i>
+                </button>
+            </div>
+            <div class="d-flex p-2">
+                <button class="navbar-toggler d-flex d-lg-none order-3 p-2" data-bs-toggle="offcanvas"
+                    data-bs-target="#bdNavbar">
+                    <i class="fa fa-angle-double-left"
+                        style="font-size:26px; width: 24px; padding: 0px 23px 3px 8px;"></i>
+                </button>
+            </div>
+            <div class="offcanvas-lg offcanvas-end flex-grow-1" id="bdNavbar" data-bs-scroll="true">
+                <div class="offcanvas-body p-4 pt-0 p-lg-0" id="navbarDireita">
+                    <div class="offcanvas-header px-4 pb-0" id="direita">
+                        <h5 class="offcanvas-title" id="cursoNavBar"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            data-bs-target="#bdNavbar"></button>
+                    </div>
+
+                    <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a href="#" class="nav-link py-2 px-0 px-lg-2" onclick="window.location.reload()">Reiniciar</a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a href="#" class="nav-link py-2 px-0 px-lg-2" onclick="cadastroDisciplina()" >Nova disciplina</a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a href="#" class="nav-link py-2 px-0 px-lg-2" onclick="cadastroTema()" >Novo tema</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/ViniciusMoreira89"
+                                target="_blank" rel="noopener">
+                                <i class="fa fa-github" style="font-size:32px"></i>
+                                <small class="d-lg-none ms-2">GitHub</small>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="mailto: 89.vinicius.moreira@gmail.com">
+                                <i class="fa fa-envelope-o" style="font-size:32px"></i>
+                                <small class="d-lg-none ms-2">E-mail</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-xxl bd-gutter bd-layout">
+        <div class="row content" id="navbarEsquerda">
+            <aside class="col-lg-3 offcanvas-lg offcanvas-start bd-sidebar accordion" id="containerDisciplinas" data-bs-scroll="true">
+                <div class="offcanvas-header" id="esquerda">
+                    <h5 class="offcanvas-title">Disciplinas:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        data-bs-target="#containerDisciplinas"></button>
+                </div>
+                <br>
+            </aside>
+            <main class="col">
+                <div class="container" id="areaInput">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <p class="pt-5" id="inicio"></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3 class="col-12 text-center pt-3" id="curso"></h3>
+            </main>
+        </div>
+    </div>
+    <!--
+    <footer class=" container-fluid text-center">
+                            <p>Footer Text</p>
+                            </footer>
+                            -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script defer src="js/jquery-3.6.1.js"></script>
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>
